@@ -1,0 +1,42 @@
+/* 404.CSS */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333; }
+
+.btn-orange {
+    display: inline-block; background-color: #e57a22; color: white;
+    padding: 10px 22px; border-radius: 6px; font-weight: bold;
+    font-size: 15px; border: 2px solid #e57a22; text-decoration: none;
+}
+.btn-orange:hover { background-color: #c96a18; }
+
+.btn-contour {
+    display: inline-block; background-color: white; color: #e57a22;
+    padding: 10px 22px; border-radius: 6px; font-weight: bold;
+    font-size: 15px; border: 2px solid #e57a22; text-decoration: none;
+}
+.btn-contour:hover { background-color: #e57a22; color: white; }
+
+.page-404 {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contenu-404 { max-width: 500px; }
+
+.grand-chiffre {
+    font-size: 120px;
+    font-weight: bold;
+    color: #e57a22;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.contenu-404 h1 { font-size: 28px; margin-bottom: 12px; }
+.contenu-404 p { font-size: 16px; color: #666; margin-bottom: 30px; }
+
+.boutons-404 { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }

@@ -1,0 +1,44 @@
+/* =============================================
+   FOOTER.CSS — styles du pied de page
+   ============================================= */
+
+footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e57a22;
+  margin-bottom: 8px;
+}
+
+.footer-inner p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer nav a {
+  color: #aaa;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: #e57a22;
+}

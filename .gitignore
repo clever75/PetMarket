@@ -1,0 +1,21 @@
+# VS Code History
+.history/
+
+# Visual Studio
+.vs/
+
+# Temporary
+.tmp.driveupload/
+
+# Zip
+*.zip
+
+# Images temporaires
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

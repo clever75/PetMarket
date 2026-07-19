@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- BOUTONS ---- */
+.btn-orange {
+  display: inline-block;
+  background-color: #e57a22;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid #e57a22;
+  cursor: pointer;
+}
+.btn-orange:hover {
+  background-color: #c96a18;
+  border-color: #c96a18;
+}
+
+.btn-contour {
+  display: inline-block;
+  background-color: white;
+  color: #e57a22;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid #e57a22;
+  cursor: pointer;
+}
+.btn-contour:hover {
+  background-color: #e57a22;
+  color: white;
+}
+
+.btn-petit {
+  padding: 7px 14px;
+  font-size: 13px;
+}
+
+/* ---- HEADER ---- */
+header {
+  background-color: white;
+  border-bottom: 2px solid #e57a22;
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e57a22;
+}
+header nav {
+  display: flex;
+  gap: 24px;
+}
+header nav a {
+  font-size: 15px;
+}
+header nav a:hover {
+  color: #e57a22;
+}
+.header-droite {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.user-bonjour {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* ---- CONTENU PRINCIPAL ---- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+/* ---- HAUT DU CATALOGUE ---- */
+.catalogue-haut {
+  margin-bottom: 30px;
+}
+.catalogue-haut h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.sous-titre {
+  color: #888;
+  font-size: 15px;
+}
+
+/* ---- FORMULAIRE DE RECHERCHE ---- */
+.form-recherche {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.form-recherche input[type="text"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.form-recherche input[type="text"]:focus {
+  outline: none;
+  border-color: #e57a22;
+}
+
+.form-recherche select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form-recherche select:focus {
+  outline: none;
+  border-color: #e57a22;
+}
+
+/* ---- GRILLE D'ANIMAUX ---- */
+.grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ---- CARTE ANIMAL ---- */
+.carte {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.carte:hover {
+  border-color: #e57a22;
+}
+
+.carte img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.carte-corps {
+  padding: 14px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #fff3e0;
+  color: #b85c00;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.carte-corps h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.carte-corps h3 a {
+  color: #1a1a1a;
+}
+
+.carte-corps h3 a:hover {
+  color: #e57a22;
+}
+
+.prix {
+  color: #e57a22;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* ---- MESSAGE SI VIDE ---- */
+.message-vide {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
+.message-vide p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e57a22;
+  margin-bottom: 8px;
+}
+.footer-inner p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer nav a {
+  color: #aaa;
+  font-size: 14px;
+}
+footer nav a:hover {
+  color: #e57a22;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .grille {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header nav {
+    display: none;
+  }
+  .form-recherche {
+    flex-direction: column;
+  }
+  .form-recherche input,
+  .form-recherche select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .grille {
+    grid-template-columns: 1fr;
+  }
+}

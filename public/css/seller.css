@@ -1,0 +1,261 @@
+/* seller.css — même base que admin.css avec couleur bleue pour le vendeur */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn-orange {
+  background-color: #e57a22;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #e57a22;
+  cursor: pointer;
+  font-family: Arial;
+}
+.btn-orange:hover {
+  background-color: #c96a18;
+}
+
+.btn-contour {
+  background-color: white;
+  color: #e57a22;
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #e57a22;
+  cursor: pointer;
+  font-family: Arial;
+  display: inline-block;
+}
+.btn-contour:hover {
+  background-color: #e57a22;
+  color: white;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 14px 0;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e57a22;
+}
+.seller-badge {
+  font-size: 14px;
+  color: #aaa;
+}
+.header-droite {
+  display: flex;
+  gap: 10px;
+}
+
+.admin-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px 60px;
+}
+.admin-page h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+.sous-titre {
+  color: #888;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.stat {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 24px;
+  flex: 1;
+  text-align: center;
+}
+.nombre {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e57a22;
+}
+.libelle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.alerte-succes {
+  background-color: #e0f5e0;
+  color: #1a7a1a;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-left: 4px solid #1a7a1a;
+}
+.alerte-erreur {
+  background-color: #ffe0e0;
+  color: #cc0000;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  border-left: 4px solid #cc0000;
+}
+
+.bloc {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.bloc h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.form-ligne {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.champ {
+  flex: 1;
+  min-width: 180px;
+}
+.champ label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #444;
+}
+.champ input,
+.champ select {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: Arial;
+  background-color: white;
+}
+.champ input:focus,
+.champ select:focus {
+  outline: none;
+  border-color: #e57a22;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead {
+  background-color: #f5f5f5;
+}
+th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #ddd;
+}
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  vertical-align: middle;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+
+.photo-table {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.btn-modifier {
+  background-color: #e8f0fe;
+  color: #1565c0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 6px;
+}
+.btn-modifier:hover {
+  background-color: #c5d8ff;
+}
+.btn-supprimer {
+  background-color: #ffe0e0;
+  color: #cc0000;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.btn-supprimer:hover {
+  background-color: #ffc0c0;
+}
+
+.form-modif {
+  padding: 16px 0;
+}
+.message-vide {
+  color: #888;
+  font-size: 15px;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+  }
+  .form-ligne {
+    flex-direction: column;
+  }
+  th,
+  td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}

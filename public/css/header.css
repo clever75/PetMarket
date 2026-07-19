@@ -1,0 +1,432 @@
+/* HEADER.CSS */
+
+header {
+    background-color: white;
+    border-bottom: 2px solid #e57a22;
+    padding: 14px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e57a22;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav {
+    display: flex;
+    gap: 24px;
+}
+
+header nav a {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+header nav a:hover { color: #e57a22; }
+
+.header-droite {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ---- ICÔNE PANIER ---- */
+.btn-panier {
+    position: relative;
+    font-size: 20px;
+    color: #555;
+    text-decoration: none;
+    padding: 4px;
+}
+
+.btn-panier:hover { color: #e57a22; }
+
+.badge-panier {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #e57a22;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---- AVATAR (cercle avec lettre) ---- */
+.user-menu {
+    position: relative;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background-color: #e57a22;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    transition: background-color 0.2s;
+}
+
+.avatar:hover { background-color: #c96a18; }
+
+/* ---- DROPDOWN ---- */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    min-width: 220px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 200;
+    overflow: hidden;
+}
+
+.dropdown.ouvert { display: block; }
+
+/* Entête du dropdown */
+.dropdown-entete {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: #fafafa;
+}
+
+.dropdown-avatar {
+    width: 42px;
+    height: 42px;
+    background-color: #e57a22;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dropdown-nom {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+}
+
+.dropdown-email {
+    font-size: 12px;
+    color: #888;
+}
+
+.dropdown-separateur {
+    height: 1px;
+    background-color: #f0f0f0;
+}
+
+/* Liens du dropdown */
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #f9f6f2;
+    color: #e57a22;
+}
+
+.dropdown a.logout {
+    color: #cc0000;
+}
+
+.dropdown a.logout:hover {
+    background-color: #ffe0e0;
+    color: #cc0000;
+}
+
+/* Badge dans le dropdown */
+.dropdown-badge {
+    margin-left: auto;
+    background-color: #e57a22;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 20px;
+}
+
+/* ---- BOUTONS ---- */
+.btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #e57a22;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #e57a22;
+    text-decoration: none;
+}
+.btn-orange:hover { background-color: #c96a18; }
+
+.btn-contour {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #e57a22;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px solid #e57a22;
+    text-decoration: none;
+}
+.btn-contour:hover { background-color: #e57a22; color: white; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header nav { display: none; }
+}
+
+/* ================================================
+   TIROIR PANIER
+   ================================================ */
+
+/* Fond sombre derrière le tiroir */
+.panier-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 300;
+}
+.panier-overlay.visible { display: block; }
+
+/* Le tiroir lui-même */
+.panier-tiroir {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 420px;
+    height: 100%;
+    background-color: white;
+    z-index: 400;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+}
+
+/* Quand la classe ouvert est ajoutée → le tiroir glisse */
+.panier-tiroir.ouvert { right: 0; }
+
+/* Entête du tiroir */
+.tiroir-entete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+.tiroir-entete h2 {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tiroir-fermer {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+.tiroir-fermer:hover { background-color: #f5f5f5; color: #333; }
+
+/* Contenu scrollable */
+.tiroir-contenu {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+/* Un article dans le tiroir */
+.tiroir-article {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.tiroir-article img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.tiroir-article-info { flex: 1; }
+.tiroir-article-nom {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+.tiroir-article-prix { font-size: 13px; color: #e57a22; font-weight: bold; margin-bottom: 8px; }
+
+/* Contrôles quantité dans le tiroir */
+.tiroir-qte {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+}
+.tiroir-qte button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #555;
+}
+.tiroir-qte button:hover { background-color: #f5f5f5; color: #e57a22; }
+.tiroir-qte span {
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+/* Bouton supprimer article */
+.tiroir-supprimer {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.tiroir-supprimer:hover { color: #cc0000; background-color: #ffe0e0; }
+
+/* Panier vide dans le tiroir */
+.tiroir-vide {
+    text-align: center;
+    padding: 60px 20px;
+    color: #aaa;
+}
+.tiroir-vide i { font-size: 48px; margin-bottom: 16px; display: block; }
+.tiroir-vide p { font-size: 15px; margin-bottom: 20px; }
+
+/* Pied du tiroir */
+.tiroir-pied {
+    padding: 16px 20px;
+    border-top: 1px solid #eee;
+    background-color: white;
+}
+.tiroir-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+.btn-commander {
+    width: 100%;
+    background-color: #e57a22;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: Arial;
+    margin-bottom: 10px;
+}
+.btn-commander:hover { background-color: #c96a18; }
+.tiroir-securite {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Bouton panier dans le header (style bouton pas lien) */
+.btn-panier {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+.btn-panier:hover { color: #e57a22; background-color: #f9f6f2; }
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .panier-tiroir { width: 100%; right: -100%; }
+}
