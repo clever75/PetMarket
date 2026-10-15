@@ -1,21 +1,17 @@
-# VS Code History
-.history/
-
-# Visual Studio
+# --- Éditeurs / OS ---
+.vscode/
 .vs/
-
-# Temporary
-.tmp.driveupload/
-
-# Zip
-*.zip
-
-# Images temporaires
-*.tmp
-
-# OS
+.history/
+.idea/
 .DS_Store
 Thumbs.db
 
-# Logs
+# --- Fichiers temporaires ---
+.tmp.driveupload/
+*.tmp
 *.log
+*.zip
+
+# --- Secrets locaux ---
+.env
+config/database.local.php
